@@ -34,119 +34,133 @@ class _BottomNavBarState extends State<BottomNavBar> {
           // )
         ]),
         child: Padding(
-          padding:
-              const EdgeInsets.only(top: 10, bottom: 10, left: 4, right: 4),
-          child: ClipRRect(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(40),
-              bottomLeft: Radius.circular(40),
-              topRight: Radius.circular(40),
-              bottomRight: Radius.circular(40),
-            ),
-            child: Container(
-              decoration: BoxDecoration(color: Colors.yellow, boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 0100,
-                  spreadRadius: 100,
-                )
-              ]),
-              child: BottomNavigationBar(
-                  currentIndex: _index,
-                  selectedLabelStyle: TextStyle(
-                    color: const Color.fromARGB(255, 122, 193, 185),
-                  ),
-                  unselectedLabelStyle: TextStyle(
-                    color: Colors.blue[200],
-                  ),
-                  selectedItemColor: Color.fromARGB(255, 122, 193, 185),
-                  unselectedItemColor: Colors.blue[200],
-                  onTap: (index) {
-                    setState(() {
-                      _index = index;
-                      print(
-                        '$index',
-                      );
-                    });
-                  },
-                  type: BottomNavigationBarType.fixed,
-                  items: <BottomNavigationBarItem>[
-                    BottomNavigationBarItem(
-                      activeIcon: Padding(
-                        padding: const EdgeInsets.only(
-                          left: 10,
-                        ),
-                        child: Row(
-                          children: [
-                            Icon(
-                              Icons.home_filled,
-                              size: 32,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Text('Home'),
-                            )
-                          ],
-                        ),
-                      ),
-                      icon: Icon(
-                        Icons.home_outlined,
-                        size: 27,
-                      ),
-                      label: '',
+          padding: const EdgeInsets.only(bottom: 30, left: 7, right: 7),
+          child: Container(
+            decoration: BoxDecoration(boxShadow: [
+              BoxShadow(
+                blurRadius: 20,
+                spreadRadius: 0,
+                color: Colors.grey,
+              )
+            ]),
+            child: ClipRRect(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(35),
+                bottomLeft: Radius.circular(35),
+                topRight: Radius.circular(35),
+                bottomRight: Radius.circular(35),
+              ),
+              child: Container(
+                decoration: BoxDecoration(color: Colors.yellow, boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey,
+                    blurRadius: 0100,
+                    spreadRadius: 100,
+                  )
+                ]),
+                child: BottomNavigationBar(
+                    currentIndex: _index,
+                    selectedLabelStyle: TextStyle(
+                      fontSize: 5,
+                      color: const Color.fromARGB(255, 122, 193, 185),
                     ),
-                    BottomNavigationBarItem(
-                        activeIcon: Row(
-                          children: [
-                            Icon(
-                              Icons.message,
-                              size: 32,
-                            ),
-                            Text(' Messages'),
-                          ],
+                    unselectedLabelStyle: TextStyle(
+                      fontSize: 5,
+                      color: Colors.blue[200],
+                    ),
+                    selectedItemColor: Color.fromARGB(255, 122, 193, 185),
+                    unselectedItemColor: Colors.blue[200],
+                    onTap: (index) {
+                      setState(() {
+                        _index = index;
+                        print(
+                          '$index',
+                        );
+                      });
+                    },
+                    type: BottomNavigationBarType.fixed,
+                    items: <BottomNavigationBarItem>[
+                      BottomNavigationBarItem(
+                        activeIcon: Padding(
+                          padding: const EdgeInsets.only(
+                            left: 10,
+                          ),
+                          child: Row(
+                            // mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.home_filled,
+                                size: 32,
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text('Home'),
+                              )
+                            ],
+                          ),
                         ),
                         icon: Icon(
-                          Icons.message_outlined,
+                          Icons.home_outlined,
                           size: 27,
                         ),
-                        label: ''),
-                    BottomNavigationBarItem(
-                        activeIcon: Row(
-                          children: [
-                            Icon(
-                              Icons.bookmark_add,
-                              size: 32,
-                            ),
-                            Text(
-                              'Bookmarks',
-                            )
-                          ],
-                        ),
-                        icon: Icon(
-                          Icons.bookmark_add_outlined,
-                          size: 27,
-                        ),
-                        label: ''),
-                    BottomNavigationBarItem(
-                        activeIcon: Row(
-                          children: [
-                            Icon(
-                              Icons.person,
-                              size: 32,
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(
-                                  top: 10, bottom: 0, left: 3),
-                              child: Text('Profile'),
-                            )
-                          ],
-                        ),
-                        icon: Icon(
-                          Icons.person_2_outlined,
-                          size: 27,
-                        ),
-                        label: ''),
-                  ]),
+                        label: '',
+                      ),
+                      BottomNavigationBarItem(
+                          activeIcon: Row(
+                            // mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.message,
+                                size: 32,
+                              ),
+                              Text(' Messages'),
+                            ],
+                          ),
+                          icon: Icon(
+                            Icons.message_outlined,
+                            size: 27,
+                          ),
+                          label: ''),
+                      BottomNavigationBarItem(
+                          activeIcon: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.bookmark_add,
+                                size: 30,
+                              ),
+                              Text(
+                                'Bookmarks',
+                              )
+                            ],
+                          ),
+                          icon: Icon(
+                            Icons.bookmark_add_outlined,
+                            size: 27,
+                          ),
+                          label: ''),
+                      BottomNavigationBarItem(
+                          activeIcon: Row(
+                            // mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.person,
+                                size: 32,
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(left: 5, top: 10),
+                                child: Text('Profile'),
+                              )
+                            ],
+                          ),
+                          icon: Icon(
+                            Icons.person_2_outlined,
+                            size: 27,
+                          ),
+                          label: ''),
+                    ]),
+              ),
             ),
           ),
         ),
