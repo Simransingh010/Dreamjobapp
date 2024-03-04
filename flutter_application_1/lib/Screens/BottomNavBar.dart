@@ -34,21 +34,22 @@ class _BottomNavBarState extends State<BottomNavBar> {
           // )
         ]),
         child: Padding(
-          padding: const EdgeInsets.only(bottom: 30, left: 7, right: 7),
+          padding: const EdgeInsets.only(bottom: 20, left: 10, right: 10),
           child: Container(
+            height: 70,
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(
-                blurRadius: 20,
+                blurRadius: 18,
                 spreadRadius: 0,
                 color: Colors.grey,
               )
             ]),
             child: ClipRRect(
               borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(35),
-                bottomLeft: Radius.circular(35),
-                topRight: Radius.circular(35),
-                bottomRight: Radius.circular(35),
+                topLeft: Radius.circular(20),
+                bottomLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+                bottomRight: Radius.circular(20),
               ),
               child: Container(
                 decoration: BoxDecoration(color: Colors.yellow, boxShadow: [
@@ -147,11 +148,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                                 Icons.person,
                                 size: 32,
                               ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 5, top: 10),
-                                child: Text('Profile'),
-                              )
+                              Text('Profile')
                             ],
                           ),
                           icon: Icon(
