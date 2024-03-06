@@ -15,7 +15,7 @@ class ProfilePage extends StatelessWidget {
         backgroundColor: Colors.white,
         toolbarHeight: 60,
         title: Card(
-          margin: EdgeInsets.only(left: 300),
+          margin: EdgeInsets.only(left: 280),
           borderOnForeground: true,
           shadowColor: Colors.white,
           color: Colors.white,
@@ -24,13 +24,13 @@ class ProfilePage extends StatelessWidget {
             borderRadius: BorderRadius.circular(15.0),
           ),
           child: SizedBox(
-            width: 50,
+            width: 100,
             height: 50,
             child: IconButton(
                 onPressed: () {},
                 icon: Icon(
                   Icons.notifications_on_outlined,
-                  size: 30,
+                  size: 27,
                   color: Colors.black,
                 )),
           ),
@@ -186,7 +186,7 @@ class ProfilePage extends StatelessWidget {
                 Container(
                   // color: Colors.pink,
                   height: 150,
-                  width: 90,
+                  width: MediaQuery.of(context).size.width * 0.2,
                   child: Column(
                     children: [
                       Card(
@@ -261,7 +261,7 @@ class ProfilePage extends StatelessWidget {
                 padding: EdgeInsets.symmetric(
                   horizontal: 5,
                 ),
-                height: 180,
+                height: 190,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -314,7 +314,10 @@ class ProfilePage extends StatelessWidget {
                     ),
                     LineChartWidget(),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.only(
+                        left: 10,
+                        bottom: 10,
+                      ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
